@@ -11,3 +11,185 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*---- General Styles ----*/
+html, body {
+  height: 100%;
+}
+.hidden {
+  display: none;
+}
+
+/*---- Header ----*/
+header {
+  color: white;
+  background: #16216A;
+  height: 5em;
+}
+#location-search {
+  flex-grow: 1;
+  padding-left: 5em;
+}
+#location-search input {
+  height: 2.5em;
+}
+#location-input {
+  flex-grow: 1;
+  max-width: 30em;
+  padding: 0 .5em 0 1em;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+#location-search input[type=submit] {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.weather-message {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/*---- Main ----*/
+main {
+  height: calc(100% - 8.5em);
+  min-height: 500px;
+  position: relative;
+}
+#map-container {
+  height: 100%;
+}
+.weather-info-container {
+  position: absolute;
+  z-index: 1;
+  top: 1em;
+  right: 1em;
+  background: #007bffa3;
+  padding: 1.25em 1.25em 1.5em;
+  border-radius: 1em;
+  width: 100%;
+  max-width: 15em;
+  color: white;
+}
+.weather-message-wrapper {
+  padding-top: .5em;
+  margin-top: .5em;
+  border-top: solid 3px rgba(22, 33, 106, .7);
+  text-align: center;
+}
+.weather-info-container p {
+  margin-bottom: 0;
+  line-height: 1em;
+}
+.current-temp {
+  font-size: 3.5em;
+}
+.weather-icon {
+  width: 60px;
+  height: 60px;
+}
+.max-min-container p {
+  font-size: 1.2em;
+}
+.max-temp {
+  margin-right: .5em;
+  padding-right: .5em;
+  border-right: 1px solid white;
+}
+
+/*---- Footer ----*/
+footer {
+  background: #E6E6E6;
+  height: 3.5em;
+}
+footer p {
+  margin: 0;
+}
+
+
+/*---- Overlay ----*/
+#overlay {
+  position: fixed;
+  height: 100%; 
+  width: 100%;
+  top: 0;
+  right: 0;  
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1;
+  display: none;
+}
+#popup {
+  max-width: 500px;
+  width: 80%;
+  max-height: 300px;
+  height: 80%; 
+  padding: 2em;
+  position: absolute;
+  background: #fff;
+  font-size: 1em;
+  border-radius: 1em;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #000;
+}
+#popup p {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+#station-name {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+  border-bottom: 1px solid;
+}
+
+/*---- Mobile Breakpoints ----*/
+
+@media (max-width: 767px) {
+  header {
+    height: unset;
+    padding: 1em 0;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: .5em;
+  }
+  #location-search {
+    padding-left: 0;
+  }
+  #location-input {
+    max-width: unset;
+  }
+  footer {
+    height: 2.5em;
+  }
+  main {
+    height: calc(100% - 11.25em);
+    min-height: unset;
+  }
+  .current-temp {
+    font-size: 2.5em;
+  }
+  .max-min-container p {
+    font-size: 1em;
+  }
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .weather-info-container {
+    max-width: 12em;
+  }
+}
