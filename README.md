@@ -1,4 +1,4 @@
-## P'unk Avenue Frontend Challenge by Sergio Cabral
+## P'unk Avenue Frontend Challenge - React Version by Sergio Cabral
 
 In this version, the map of the city starts populated with the location of all the Indego Stations. Based on the color you can see how many bikes are available, this same number is shown as a label in the middle of the location marker. The user can see how many docks are available hovering over the marker to see the tool-tip containing this information. More information about the station, in this case the address, can be seen by clicking on the marker and an overlay with said information will appear.
 
